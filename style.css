@@ -9,7 +9,18 @@ body {
   padding: 30px;
   text-align: center;
   color:white;
-  background: url("camera.jpg");
+}
+
+@media only screen and (min-width: 500px) {
+    #header {
+        background: url("camera.jpg");
+    }
+    
+    #home {
+            background: url(camera2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
 }
 
 #navbar {
@@ -57,9 +68,6 @@ body {
     padding: 0;
     margin: 0;
     height: 800px;
-    background: url(camera2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .paragraph {
