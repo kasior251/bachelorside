@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8" />
+<link rel="stylesheet" href="style.css" >
+<script src="jquery-3.2.1.js"></script>
+<title>Photogram</title>
+
+</head>
+<body>
+
+<div id="header">
+  <h1>Photogram</h1>
+  <p>Bacheloroppgave 2018</p>
+</div>
+
+<div id="navbar">
+  <a class="active" href="#header">Hjem</a>
+  <a href="#about">Om oss</a>
+  <a href="#assignment">Om oppgaven</a>
+  <a href="#sketch">Prosjektskisse</a>
+  <a href="#project1">Forprosjekt</a>
+  <a href="javascript:void(0)">Sluttrapport</a>
+  <a href="javascript:void(0)">Kontakt</a>
+</div>
+
+<div class="content">
+    <div id="home" class="paragraph">
+        
+    </div>
+    
+    <div id="about" class="paragraph">
+        <h4>Gruppemedlemmer</h4>
+        <p>Andreas Stenseng Bjørnrud s236654, Informasjonsteknologi</p>
+        <p>Sergio Jon Rye s236614, Informasjonsteknologi</p>
+        <p>Katarzyna Anna Zubowicz s305327, Dataingeniør</p>
+    </div>
+    
+    <div id="assignment" class="paragraph">
+        <h4>Oppgave</h4>
+        <p>Photogram er en applikasjon som gir brukeen mulighet til å lagre og dele bilder i form av album med andre brukere</p>
+        <p>Album kan være knyttet til et arrangement, eller være en samling av tilfeldige bilder</p>
+        <p>Eieren av bilder/album bestemmer hvem som får se bilder</p>
+    </div>
+    
+    <div id="sketch" class="paragraph">
+        <h4>Prosjektskisse</h4>
+        <embed src="prosjektskisse.pdf" width="800" height="1000" type="application/pdf"/>
+    </div>
+    
+    <div id="project1" class="paragraph">
+        <h4>Forprosjektrapport</h4>
+        <embed src="Forprosjektrapport.pdf" width="800" height="1000" type="application/pdf" />
+    </div>
+</div>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+$('a[href^="#"]').on('click', function(event) {
+    $('a[href^="#"]').removeClass("active");
+    this.classList.add("active");
+    var target = $(this.getAttribute('href'));
+
+    alert(clicked);
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+
+</script>
+
+</body>
+</html>
