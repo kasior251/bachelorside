@@ -21,8 +21,8 @@ body {
             background: url(camera2.jpg);
             background-repeat: no-repeat;
             background-size: auto;
-            margin: auto;
             width: 50%;
+            margin-left: 25%;
     }
 }
 
