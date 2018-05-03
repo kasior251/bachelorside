@@ -19,8 +19,10 @@ body {
     
     #home {
             background: url(camera2.jpg);
-    background-repeat: no-repeat;
-    background-size: auto;
+            background-repeat: no-repeat;
+            background-size: auto;
+            margin: auto;
+            width: 50%;
     }
 }
 
